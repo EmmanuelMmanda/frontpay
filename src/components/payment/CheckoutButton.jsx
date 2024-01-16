@@ -49,7 +49,7 @@ const CheckoutButton = ({ order, onSuccess }) => {
   
       console.log('response',data);
   
-      if (data.status == 201 || data.status == 200) {
+      if (response.status == 201 || response.status == 200) {
         navigate("/tasks");
       } else {
         navigate("/tasks?msg=Failed to add payment");
