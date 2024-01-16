@@ -28,9 +28,14 @@ const TaskForm = () => {
         task,
         {
           headers: {
-            Authorization: `Bearer ${user.access_token}`,
-            "Content-Type": "application/json",
-          },
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${user.access_token}`,
+            'X-Content-Type-Options': 'nosniff', // Prevent MIME sniffing
+            'X-Frame-Options': 'DENY', // Prevent clickjacking attacks
+            'X-XSS-Protection': '1; mode=block', // Enable XSS protection
+            'Referrer-Policy': 'no-referrer', // Reduce information leakage
+            'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload', // Enforce HTTPS
+          },        
         }
       );
       if (response.status == 201){

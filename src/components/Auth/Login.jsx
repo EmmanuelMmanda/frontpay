@@ -89,6 +89,15 @@ const ApiCallForLogin = async (username, password) => {
     const response = await axios.post(apiUrl, {
       email: username,
       password: password,
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Content-Type-Options': 'nosniff', // Prevent MIME sniffing
+        'X-Frame-Options': 'DENY', // Prevent clickjacking attacks
+        'X-XSS-Protection': '1; mode=block', // Enable XSS protection
+        'Referrer-Policy': 'no-referrer', // Reduce information leakage
+        'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload', // Enforce HTTPS
+      },
+    
     });
 
     const { username: Username, access_token: AccessToken } = response.data;
