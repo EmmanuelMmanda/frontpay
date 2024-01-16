@@ -27,7 +27,7 @@ const TaskList = () => {
     };
 
     fetchTasks();
-  }, [user.access_token]);
+  }, [user]);
 
   return (
     <AuthenticatedComponent>

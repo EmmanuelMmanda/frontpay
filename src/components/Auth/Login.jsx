@@ -58,6 +58,7 @@ const Login = () => {
             style={{ marginBottom: "16px", width: "100%" }}
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            required
           />
           <TextField
             label="Password"
@@ -67,6 +68,7 @@ const Login = () => {
             value={password}
             autoComplete="off"
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
           <Button variant="contained" color="primary" type="submit">
             Login
