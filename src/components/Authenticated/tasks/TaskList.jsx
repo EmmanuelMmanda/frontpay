@@ -39,7 +39,7 @@ const TaskList = () => {
           <Typography variant="body1">
             Description: {task.description}
           </Typography>
-          <Typography variant="body1">Price: {task.price}</Typography>
+          <Typography variant="body1">Price: {task.price} $</Typography>
           <Typography variant="body1">Status: {task.status}</Typography>
         </Paper>
       ))}

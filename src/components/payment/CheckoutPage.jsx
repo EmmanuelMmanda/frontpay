@@ -31,7 +31,7 @@ const CheckoutPage = () => {
           <Typography variant="body1">ID: {id}</Typography>
           <Typography variant="body1">Title: {title}</Typography>
           <Typography variant="body1">Description: {description}</Typography>
-          <Typography variant="body1">Price: {price}</Typography>
+          <Typography variant="body1">Price: {price} $</Typography>
         </Grid>
 
         <Typography variant="h6">Payment Options:</Typography>

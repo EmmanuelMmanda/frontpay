@@ -1,15 +1,14 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider } from './store/authContext';
-import TaskForm from './components/Authenticated/tasks/TaskForm';
-import CheckoutPage from './components/payment/CheckoutPage';
-import Login from './components/Auth/Login';
-import TaskList from './components/Authenticated/tasks/TaskList';
-import PrivateRoute from './components/private/PrivateRoute';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { AuthProvider } from "./store/authContext";
+import TaskForm from "./components/Authenticated/tasks/TaskForm";
+import CheckoutPage from "./components/payment/CheckoutPage";
+import Login from "./components/Auth/Login";
+import TaskList from "./components/Authenticated/tasks/TaskList";
 
 const App = () => {
   return (
     <AuthProvider>
-    <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/tasks" element={<TaskList />} />
