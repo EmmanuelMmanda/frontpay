@@ -22,7 +22,7 @@ const TaskList = () => {
         console.log(response);
         setTasks(data.tasks);
       } catch (error) {
-        console.error("Error Adding tasks:", error);
+        console.error("Error fething tasks:", error);
       }
     };
 
